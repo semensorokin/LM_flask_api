@@ -1,0 +1,8 @@
+	bin/
+	cprob_nkra
+	cprob_nkra.zip
+	lib/
+	lib64
+	new.py
+	pyvenv.cfg
+	share/
