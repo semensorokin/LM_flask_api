@@ -1,13 +1,19 @@
-# H1 How to use?
+#  How to use?
 
-1. Activate Venv  
+1. Activate Virtual enviroment  
 ```source env/bin/activate```
-2. Run flask 
+
+2. Run flask server
+ 
 ```flask run```
-3. Usage example 
+
+3. Usage example (Bert model)
+ 
 ```curl http://localhost:5000 -d "data=Remember the milk" -X GET```
-4. Now it works only with a sentence. Text is not valid.
-5. Result 
+
+⋅⋅* **Now it works only with a sentence. Text is not valid.
+
+5. Result: Attention heads from Bert (can be used for visualization); Parsed sentence
 ``` {"sentence":
 {"head_#0":[[0.9350049351952404,0.7087399366556502,0.47418215586053925],[0.25280783722352795,0.9925835552491565,0.6018457265643695],[0.3438538975193455,0.7614047233522058,0.9848539984743098]],
 "head_#1":[[0.8552603609046541,0.8265935037138128,0.30286640679210153],[0.2024743964388539,0.6772394453289672,0.46881079816442983],[0.8845959800121068,0.6171441420235886,0.4123274746203992]],
@@ -23,7 +29,9 @@
 "head_#9":[[0.40269127235071345,0.2677818194240932,0.5959565543461037],[0.15847011142997847,0.46117792494398957,0.6654463197154274],[0.9999738278472752,0.8672043187755779,0.7552910871222924]],
 "sentence_probs":{"Remember":0.35,"milk":0.25,"the":0.4}}}
 ```
-6. ```curl http://localhost:5000/HMM -d "data=привет" -X GET```
+6.  
+
+```curl http://localhost:5000/HMM -d "data=привет" -X GET```
 
 
 Returned JSON contains attention matricies from 12 heads (key - head_#_) and probabilities of each word in the splited sentence. 
